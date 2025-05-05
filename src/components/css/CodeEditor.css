@@ -53,6 +53,7 @@
     border-radius: 4px;
   }
 
+  /* Monaco Editor Mobile Adjustments */
   .monaco-editor {
     font-size: 11px !important;
   }
@@ -62,6 +63,7 @@
   }
 }
 
+/* Desktop Layout */
 @media (min-width: 769px) {
   .code-editor-content {
     flex-direction: row;
@@ -91,74 +93,3 @@
   overflow: auto;
 }
 
-.button-group {
-  display: flex;
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.button-group button {
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 0.5rem;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-}
-
-/* Responsive Scaling */
-@media (max-width: 1200px) {
-  .button-group button {
-    padding: 0.7rem 1.3rem;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .button-group button {
-    padding: 0.6rem 1.1rem;
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .button-group {
-    gap: 0.5rem;
-    padding: 0.5rem;
-  }
-
-  .button-group button {
-    padding: 0.5rem 0.9rem !important;
-    font-size: 0.8rem !important;
-    border-radius: 0.4rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .button-group {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .button-group button {
-    width: 100% !important;
-    padding: 0.6rem 1rem !important;
-    font-size: 0.75rem !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .button-group button {
-    font-size: 3vw !important;
-    padding: 1.5vw 3vw !important;
-    min-width: 20vw;
-  }
-}
-
-@media (hover: none) and (pointer: coarse) {
-  .button-group button {
-    min-height: 44px;
-    padding: 2.5vw 4vw !important;
-  }
-}
