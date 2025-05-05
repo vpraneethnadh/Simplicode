@@ -41,3 +41,13 @@
   flex: 1;
   overflow: auto;
 }
+
+@media (hover: none) and (pointer: coarse) {
+  .monaco-editor .scrollbar {
+    width: 8px !important;
+  }
+  
+  .monaco-editor .decorationsOverviewRuler {
+    display: none !important;
+  }
+}
