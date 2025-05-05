@@ -1,0 +1,43 @@
+.code-editor-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #0f0a19;
+}
+
+.main-area {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.code-editor-content {
+  display: flex;
+  flex: 1;
+  gap: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.editor-box,
+.output-box {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.output-inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.output-inner > * {
+  flex: 1;
+  overflow: auto;
+}

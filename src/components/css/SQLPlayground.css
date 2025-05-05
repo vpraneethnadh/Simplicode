@@ -1,0 +1,251 @@
+:root {
+  --bg-page:         #000;
+  --bg-panel:        #111;
+  --text-light:      #eee;
+  --text-secondary:  #888;
+  --accent:          #1e90ff;
+  --accent-hover:    #1c86ee;
+  --error-bg:        #330000;
+  --error-color:     #ff6b6b;
+  --success-bg:      #003300;
+  --success-color:   #6bff6b;
+  --border:          #333;
+  --radius:          6px;
+  --gap:             1rem;
+}
+
+/* Full-page container */
+.sql-playground {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: var(--bg-page);
+  color: var(--text-light);
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+/* Header & Toolbar */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1rem;
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border);
+}
+.header .logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-light);
+}
+.header h2 {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--accent);
+  font-size: 1.5rem;
+}
+.toolbar {
+  display: flex;
+}
+.toolbar .btn {
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--border);
+  color: var(--text-light);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 0.9rem;
+}
+.toolbar .btn.primary {
+  background: var(--accent);
+  color: #fff;
+}
+.toolbar .btn:hover {
+  background: var(--text-secondary);
+}
+.toolbar .btn.primary:hover {
+  background: var(--accent-hover);
+}
+
+.panels {
+  flex: 1;
+  display: flex;
+  gap: var(--gap);
+  padding: 1rem;
+  box-sizing: border-box;
+  height: calc(100vh - 80px);
+}
+
+.panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Editor Panel */
+.editor-panel {
+  flex: 1.5;
+  min-width: 0;
+  height: 100%;
+  max-height: 100vh;
+}
+.editor-panel .monaco-editor {
+  flex: 1;
+  background-color: #000 !important;
+  height: 100% !important;
+  min-height: 100% !important;
+}
+
+/* Results Panel */
+.results-panel {
+  flex: 1.5;
+  min-width: 0;
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Banners */
+.banner {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+}
+.banner.error {
+  background: var(--error-bg);
+  color: var(--error-color);
+}
+.banner.success {
+  background: var(--success-bg);
+  color: var(--success-color);
+}
+
+/* No results */
+.no-results {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Tables */
+.table-wrapper {
+  flex: 1;
+  overflow: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+th {
+  background: var(--bg-page);
+  color: var(--accent);
+}
+tr:nth-child(even) { background: #1a1a1a; }
+tr:hover { background: #222; }
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Export Modal */
+.export-modal {
+  background: var(--bg-panel);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  width: 90%; max-width: 400px;
+}
+.export-modal h3 {
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+.export-modal input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-page);
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.logo-sql{
+  margin: 0;
+  font-family: cursive;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #569cd6;
+  padding: 0px 0px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  background: linear-gradient(to right, #569cd6 0%, #4CAF50 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo-sql::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #4CAF50;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.logo-sql:hover::after {
+  transform: scaleX(1);
+}
+
+.text-sql{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+.modal-box {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+  transform: scale(0.9);
+  opacity: 0;
+  animation: boxPopIn 0.25s ease-out 0.1s forwards;
+  text-align: center;
+}

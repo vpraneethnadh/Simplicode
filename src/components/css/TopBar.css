@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+:root {
+  --primary-accent: #4CAF50;
+  --secondary-accent: #569cd6;
+  --text-primary: #ffffff;
+  --text-secondary: #d4d4d4;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2d2d2d;    /* Slightly lighter than editor for hierarchy */
+  color: #ffffff;               /* Pure white for maximum contrast */
+  padding: 0 16px;
+  height: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid #3c3c3c; /* Subtle separation line */
+}
+
+.topbar a,
+.topbar .logo {
+  color: #ECEFF4;                      
+}
+/* Topbar Buttons */
+.topbar button {
+  background-color: #4c59af;           /* Primary accent color */
+  color: #ffffff;                     /* Pure white for contrast */
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Segoe UI', system-ui;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.topbar button:hover {
+  background-color: #4553a0;           /* Darker shade of primary */
+  transform: translateY(-1px);
+}
+
+.topbar button:focus {
+  outline: 2px solid #569cd6;          /* Secondary accent color */
+  outline-offset: 2px;
+  box-shadow: 0 0 8px rgba(86, 156, 214, 0.4);
+}
+
+.topbar button.loading {
+  background-color: #2d2d2d;
+  color: var(--text-secondary);
+  cursor: progress;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar-btn-ai{
+  background-color: #4CAF50;           /* Primary accent color */
+  color: #ffffff;                     /* Pure white for contrast */
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Segoe UI', system-ui;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.topbar-btn-ai:disabled {
+  background-color: gray;
+  cursor: not-allowed; /* show the forbidden cursor */
+}
+
+.topbar-btn-ai:disabled:hover {
+  /* keep your hover‐styles, but ensure the cursor stays blocked */
+  background-color: gray;
+  color: white;
+  cursor: not-allowed;
+}
+
+
+/* Logo Styling */
+.logo {
+  margin: 0;
+  font-family: cursive;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #569cd6;                      /* Secondary accent color */
+  padding: 8px 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  background: linear-gradient(to right, #569cd6 0%, #4CAF50 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo:hover {
+  transform: scale(1.02);
+  text-shadow: 0 0 12px rgba(86, 156, 214, 0.3);
+}
+
+.logo::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #4CAF50;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.logo:hover::after {
+  transform: scaleX(1);
+}
+
+.topbar-btn {
+  background-color: #4da6ff;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.topbar-btn:hover {
+  background-color: #3a94e0;
+}
+
+.topbar-btn.ask-ai {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  transition: transform 0.2s, color 0.2s, border-color 0.2s;
+}
+.topbar-btn.ask-ai:not(:disabled):hover {
+  background: rgba(255,255,255,0.1);
+}
+.topbar-btn.ask-ai:disabled {
+  color: #777;
+  border-color: #555;
+  cursor: not-allowed;
+  filter: grayscale(80%);
+  opacity: 0.6;
+}
+
+.topbar-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-container {
+  position: relative;
+}
+.profile-pic {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+.profile-dropdown {
+  position: absolute;
+  top: 44px;
+  right: 0;
+  background: #fff;
+  color: #000;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+.profile-dropdown p {
+  margin: 0;
+  font-size: 14px;
+}
+.profile-dropdown button {
+  margin-top: 10px;
+  padding: 4px 8px;
+  border: none;
+  background: #61dafb;
+  color: #000;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.profile-dropdown .profile-actions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.profile-dropdown .profile-actions li + li {
+  margin-top: 8px;
+}
+.profile-dropdown .profile-actions button {
+  width: 100%;
+  display: block;
+}
+
+/* Modern modal/dialog styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000080;
+  /* backdrop-filter: blur(4px); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: overlayFadeIn 0.3s ease forwards;
+  z-index: 1000;
+}
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modal-box {
+  background-color: var(--color-bg-secondary, #fff);
+  color: var(--color-text, #000);
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 90%;
+  width: 400px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+  transform: scale(0.9);
+  opacity: 0;
+  animation: boxPopIn 0.25s ease-out 0.1s forwards;
+  text-align: center;
+}
+@keyframes boxPopIn {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-box h3 {
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.modal-input {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.75rem 0;
+  border: 1px solid var(--color-bg-main, #ccc);
+  border-radius: 4px;
+  background: var(--color-bg-main, #f9f9f9);
+  color: var(--color-text, #333);
+  font-size: 1rem;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+.modal-actions .topbar-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.modal-actions .topbar-btn:hover {
+  background-color: var(--color-bg-editor, #3a94e0);
+  transform: translateY(-1px);
+}

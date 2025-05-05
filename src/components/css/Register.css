@@ -1,0 +1,189 @@
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: #f2f2f2; */
+  background: url('../../Images/BackgroundImage.jpg') center center no-repeat fixed;
+  background-size: cover;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  /* filter: blur(8px); */
+  /* -webkit-filter: blur(8px); */
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.register-card {
+  display: flex;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.register-image {
+  background: url('../images/photo.webp') center/cover no-repeat fixed;
+  flex: 1;
+  background: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.register-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.register-form {
+  flex: 1;
+  background-color: rgba(237, 198, 242, 0.481);
+  padding: 3rem 2.5rem;
+  /* background: url('../images/BackgroundImage.jpg') center center no-repeat; */
+  /* background-size: cover; */
+}
+
+.register-form h2 {
+  margin: 0 0 1.5rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.input-group .icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.input-group .copy-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  cursor: pointer;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 12px 40px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  background-color: #fff;
+  color: #333;
+}
+
+.input-group select {
+  appearance: none;
+}
+
+.input-group input::placeholder {
+  color: #000;
+}
+
+.avatar-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  object-fit: cover;
+  background: var(--border);
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.avatar.selected {
+  border-color: var(--accent);
+}
+
+.register-button {
+  width: 100%;
+  padding: 14px;
+  background-color: #4da6ff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.register-button:hover {
+  opacity: 0.95;
+}
+
+.social-login {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.social-button {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.5rem;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.social-button .social-icon {
+  margin-right: 6px;
+}
+
+.social-button.google {
+  background-color: #db4437;
+  color: #fff;
+}
+
+.social-button.google:hover {
+  opacity: 0.9;
+}
+
+.error-message {
+  color: #d9534f;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.login-text {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 1rem;
+}
+
+.link-inline {
+  color: #4da6ff;
+  text-decoration: none;
+}
+
+.link-inline:hover {
+  text-decoration: underline;
+}
+

@@ -1,0 +1,93 @@
+.forgot-page {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: #000 url('../../Images/BackgroundImage.jpg') center center / cover no-repeat fixed;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.forgot-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.forgot-title {
+  margin: 0 0 1.5rem;
+  font-size: 1.75rem;
+  color: #333;
+}
+
+.success {
+  color: #28a745;
+  margin-bottom: 1rem;
+}
+
+.error {
+  color: #d9534f;
+  margin-top: 0.5rem;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.input-group .icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.input-group .copy-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  cursor: pointer;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 40px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fff;
+  color: #333;
+  outline: none;
+}
+
+.input-group input::placeholder {
+  color: #000;
+}
+
+.forgot-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4da6ff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.forgot-button:hover {
+  opacity: 0.95;
+}
+
+.remember-text{
+  font-size: 14px;
+  padding-top: 10px;
+  color: black;
+}

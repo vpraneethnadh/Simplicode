@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+:root {
+  --bg-page:        #000;
+  --bg-panel:       #111;
+  --text-light:     #eee;
+  --text-secondary: #888;
+  --accent:         #1e90ff;
+  --accent-hover:   #1c86ee;
+  --error-bg:       #330000;
+  --error-color:    #ff6b6b;
+  --success-bg:     #003300;
+  --success-color:  #6bff6b;
+  --border:         #333;
+  --radius:         6px;
+  --gap:            1rem;
+}
+
+.webdev-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: var(--bg-page);
+  color: var(--text-light);
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--gap);
+  background: var(--bg-panel);
+  border-bottom: 1px solid var(--border);
+}
+
+.title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.editors {
+  display: flex;
+  gap: var(--gap);
+  padding: var(--gap);
+  flex: 1;
+  overflow: hidden;
+}
+
+.editor-pane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.2s ease, font-size 0.2s ease;
+}
+
+.editor-pane:hover {
+  transform: scale(1.02);
+}
+
+.editor-pane h4 {
+  margin: 0;
+  padding: 0.75rem;
+  background: var(--bg-page);
+  color: var(--accent);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.monaco-editor {
+  flex: 1;
+  background: var(--bg-page) !important;
+}
+
+.buttons {
+  display: flex;
+  gap: var(--gap);
+}
+
+.download-button {
+  padding: 0.5rem 1rem;
+  background: #323334;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.run-button {
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: var(--text-light);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 0.9rem;
+}
+
+.run-button:hover {
+  background: var(--accent-hover);
+}
+
+.download-button:hover {
+  background: #4d4f51;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.export-modal, .download-prompt .prompt-box, .modal {
+  background: var(--bg-panel);
+  padding: var(--gap);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+input, .export-modal input, .modal input {
+  width: 100%;
+  padding: 0.5rem;
+  background: var(--bg-page);
+  color: var(--text-light);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.prompt-actions, .modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--gap);
+}
+
+.table-wrapper {
+  flex: 1;
+  overflow: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+th, td {
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+th {
+  background: var(--bg-page);
+  color: var(--accent);
+}
+tr:nth-child(even) { background: #1a1a1a; }
+tr:hover { background: #222; }
+
+.no-results, .banner {
+  margin: var(--gap) 0;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+}
+.banner.error { background: var(--error-bg); color: var(--error-color); }
+.banner.success { background: var(--success-bg); color: var(--success-color); }
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  color: var(--text-secondary);
+}
+
+.logo-web{
+  margin: 0;
+  font-family: cursive;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #569cd6;                      /* Secondary accent color */
+  padding: 0px 0px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  background: linear-gradient(to right, #569cd6 0%, #4CAF50 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo-web::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #4CAF50;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.logo-web:hover::after {
+  transform: scaleX(1);
+}
+
+.modal-box {
+  background-color: #ffffff;   /* white background */
+  color: #000000;              /* black text for contrast */
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+  transform: scale(0.9);
+  opacity: 0;
+  animation: boxPopIn 0.25s ease-out 0.1s forwards;
+  text-align: center;
+}
