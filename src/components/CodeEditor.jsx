@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { Editor } from "@monaco-editor/react";
 import { CODE_SNIPPETS } from "../constants";
 import Output from "./Output";
-import Navbar from "./Navbar";
+import Navbar from "./NavBar";
 import TopBar from "./TopBar";
 import "./css/Codeeditor.css";
 
