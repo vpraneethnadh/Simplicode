@@ -16,7 +16,7 @@ import {
   FaCuttlefish,
 } from "react-icons/fa";
 import { MdOutlineWebAsset } from "react-icons/md";
-import "./css/Navbar.css";
+import "./css/NavBar.css";
 
 const Navbar = ({ onLanguageChange }) => {
   const languages = [
