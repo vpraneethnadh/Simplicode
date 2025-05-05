@@ -21,7 +21,7 @@ import {
   FaEye,
   FaEyeSlash,
 } from 'react-icons/fa';
-import Photo from '../images/photo.webp';
+import Photo from '../images/photo.png';
 import './css/register.css';
 
 export default function Register() {
