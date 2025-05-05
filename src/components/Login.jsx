@@ -17,7 +17,7 @@ import {
   FaEyeSlash,
 } from 'react-icons/fa';
 import Photo from '../Images/photo.png';
-import './css/login.css';
+import './css/Login.css';
 
 export default function Login() {
   const [email, setEmail]           = useState('');
