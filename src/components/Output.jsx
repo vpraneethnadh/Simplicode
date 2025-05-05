@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { executeCode } from "../api";
-import "./css/output.css";
+import "./css/Output.css";
 
 const PLACEHOLDER = "Click on 'Run Code' to run";
 
