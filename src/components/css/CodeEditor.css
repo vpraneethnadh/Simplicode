@@ -18,56 +18,6 @@
   padding: 16px;
   box-sizing: border-box;
   overflow: hidden;
-  flex-direction: column;
-}
-
-/* Mobile Layout */
-@media (max-width: 768px) {
-  .code-editor-content {
-    padding: 8px;
-    gap: 8px;
-    flex-direction: column;
-  }
-
-  .editor-box {
-    order: 1;
-    flex: 3;
-    min-height: 60vh;
-  }
-
-  .output-box {
-    order: 2;
-    flex: 2;
-    min-height: 30vh;
-  }
-
-  .button-group {
-    order: 3;
-    padding: 8px 0;
-    gap: 8px;
-  }
-
-  .button-group button {
-    padding: 6px 12px;
-    font-size: 12px;
-    border-radius: 4px;
-  }
-
-  /* Monaco Editor Mobile Adjustments */
-  .monaco-editor {
-    font-size: 11px !important;
-  }
-
-  .monaco-editor .margin {
-    width: 32px !important;
-  }
-}
-
-/* Desktop Layout */
-@media (min-width: 769px) {
-  .code-editor-content {
-    flex-direction: row;
-  }
 }
 
 .editor-box,
@@ -77,8 +27,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border-radius: 8px;
-  background: #1a1a1a;
+  border-radius: 10px;
 }
 
 .output-inner {
@@ -92,4 +41,3 @@
   flex: 1;
   overflow: auto;
 }
-
