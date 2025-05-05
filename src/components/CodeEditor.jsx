@@ -4,7 +4,7 @@ import { CODE_SNIPPETS } from "../constants";
 import Output from "./Output";
 import Navbar from "./NavBar";
 import TopBar from "./TopBar";
-import "./css/Codeeditor.css";
+import "./css/CodeEditor.css";
 
 const CodeEditor = () => {
   const editorRef = useRef(null);
