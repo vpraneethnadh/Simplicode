@@ -22,7 +22,7 @@ import {
   FaEyeSlash,
 } from 'react-icons/fa';
 import Photo from '../images/photo.png';
-import './css/register.css';
+import './css/Register.css';
 
 export default function Register() {
   const [fullName, setFullName]               = useState('');
