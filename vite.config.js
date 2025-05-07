@@ -10,7 +10,8 @@ export default defineConfig({
     historyApiFallback: true,
     proxy: {
       '/generate': {
-        target: 'https://simplicode-backend-1.onrender.com',
+        // target: 'https://simplicode-backend-1.onrender.com',
+        target: 'http://localhost:3000',
         changeOrigin: true,
         rewrite: (path) => path,
       },
