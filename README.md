@@ -13,3 +13,6 @@ npm install
 
 npm run dev
 ```
+
+To check this website follow this link:
+https://simplicode.vercel.app/
